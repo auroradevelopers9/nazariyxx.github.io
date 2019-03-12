@@ -1,0 +1,63 @@
+// HEADER
+.header {
+	background-color: #fff;
+	.navbar {
+		padding: 40px 0;
+		&-collapse {
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	&__logo {
+		margin-right: 30px;
+	}
+	.nav {
+		text-align: center;
+		&__item {
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
+		&__link {
+			@include font($ral-r, 14px, $link);
+			&:hover {
+				color: $link-active;
+			}
+		}
+	}
+	&__contact {
+		display: flex;
+		text-align: center;
+		@include font($ral-r, 18px, $link);
+		.fas:before, .far:before {
+			padding-right: 10px;
+		}
+	}
+	.contact {
+	&__phone {
+			margin-right: 40px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.header {
+		.nav__item:not(:last-child), .contact__phone {
+			margin: 0;
+		}
+		.nav {
+			&__link {
+				font-size: 16px;
+			}
+		}
+		.navbar {
+			padding: 2% 0;
+		}
+		&__contact {
+			margin-top: 30px;
+		}
+		&__nav, .nav, &__contact {
+			flex-direction: column;
+		}
+	}
+}

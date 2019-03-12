@@ -1,0 +1,57 @@
+// DOWNLOAD
+.download {
+	width: 100%;
+	min-height: 730px;
+	background: url("../images/download/bg.png") 50% 50% no-repeat;
+	position: relative;
+	.container {
+		min-height: 730px;
+		position: relative;
+	}
+	.row, &__content {
+		min-height: 730px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		color: #fff;
+	}
+	&__description {
+		@include font($ral-l, 36px, #fff);
+		margin-bottom: 40px;
+	}
+	&__text {
+		@include font($ral-r, 14px, rgb(157,199,209));
+		margin-bottom: 50px;
+	}
+	&__button {
+		border-color: rgba(255, 255, 255, 0.5);
+		color: #fff;
+	}
+
+	&__phone {
+		position: absolute;
+		width: 946px;
+		height: 610px;
+		bottom: 0;
+		right: 0;
+		background: url("../images/download/phone.png") bottom right no-repeat;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.download {
+		&__phone {
+			display: none;
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	.download {
+		&__content {
+			text-align: center;
+		}
+	}
+}

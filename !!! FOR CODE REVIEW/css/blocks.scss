@@ -1,0 +1,87 @@
+.logo {
+	@include font("ProximaNova-Bold", 30px, $link);
+}
+
+.ico:before {
+	display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+body *::selection {
+	background-color: $main-color;
+	color: #fff;
+}
+
+.headline {
+	font-family: $ral-b, "Arial", sans-serif;
+	font-size: 36px;
+}
+
+.description {
+	font-family: $ral-r, "Arial", sans-serif;
+	font-size: 36px;
+}
+
+.text {
+	font-family: $ral-r, "Arial", sans-serif;
+	font-size: 16px;
+}
+
+.button {
+	width: 238px;
+	height: 58px;
+	border: 3px solid;
+	border-radius: 40px;
+	font-family: $ral-b, "Arial", sans-serif;
+	font-size: 21px;
+	text-transform: uppercase;
+	@include h-trans;
+	&:hover {
+		@include h-trans;
+		color: $main-color;
+		border-color: $main-color;
+	}
+}
+@media screen and (max-width: 767px) {
+	.button {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.button {
+		width: 100%;
+	}
+}
+
+/*UP TO TOP*/
+.up-to-top {
+    transition: all .5s ease-in-out;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #8c9494;
+    border-radius: 50%;
+    bottom: -50px;
+    right: 10px;
+    cursor: pointer;
+    .fa-angle-up {
+    	font-size: 40px;
+    	color: #8c9494;
+    	@include h-trans;
+    }
+    &:hover {
+    	border-color: $main-color;
+    	.fa-angle-up {
+    		color: $main-color;
+    		@include h-trans;
+    	}
+    }
+}

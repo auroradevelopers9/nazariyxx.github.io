@@ -1,0 +1,21 @@
+@mixin flex-c {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin font($font-f, $font-s, $font-c) {
+	font-family: $font-f, "Arial", sans-serif;
+	font-size: $font-s;
+	color: $font-c;
+} 
+
+@mixin ico($ico-content) {
+	font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: $ico-content;
+}
+
+@mixin h-trans {
+	transition: .3s ease-in-out;
+}

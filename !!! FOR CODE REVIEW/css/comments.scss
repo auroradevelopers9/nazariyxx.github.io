@@ -1,0 +1,69 @@
+/*COMMENTS*/
+.comments {
+	padding: 100px 0;
+	.row {
+		text-align: center;
+	}
+	&__headline {
+		color: $light-headline;
+		margin-bottom: 30px;
+	}
+	&__slide {
+		outline: none;
+	}
+	&__img {
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		margin: 0 auto 45px auto;
+	}
+	&__comment {
+		@include font("DroidSerif-Italic", 24px, $description);
+		margin-bottom: 25px;
+		&:before, &:after {
+			@include font("DroidSerif-Italic", 24px, $description);
+		}
+		&:before {
+			content: "\201c";
+			padding-right: 3px;
+		}
+		&:after {
+			content: "\201d";
+			padding-left: 3px;
+		}
+	}
+	&__author {
+		@include font($ral-r, 24px, $main-color);
+		text-transform: capitalize;
+		margin-bottom: 40px;
+		&:before {
+			content: "-";
+			@include font($ral-r, 24px, $main-color);
+			padding-right: 5px;
+		}
+	}
+	.slick-dots {
+		li {
+			&.slick-active {
+				button {
+					&:before {
+						color: $main-color;
+					}
+				}
+			}
+			button {
+				&:before {
+					font-size: 12px;
+					line-height: 22px;
+					opacity: 1;
+					color: rgb(140, 148, 148);
+				}
+				&:hover, &:focus {
+					&:before {
+						color: $main-color;
+					}
+				}
+			}
+		}
+	}
+}

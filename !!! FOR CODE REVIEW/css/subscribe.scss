@@ -1,0 +1,94 @@
+/*SUBSCRIBE*/
+.subscribe {
+	padding: 90px 0 110px 0;
+	background-color: rgb(243, 245, 245);
+	.row {
+		text-align: center;
+	}
+	i {
+		font-size: 36px;
+		color: $description;
+		padding-right: 15px;
+		cursor: pointer;
+	}
+	&__headline {
+		display: inline-block;
+		color: $description;
+		margin-bottom: 50px;
+	}
+	&__form {
+		&-container {
+			display: block;
+			position: relative;
+			.subscribe__form-submit {
+				position: absolute;
+				top: 0;
+				right: 14.8%;
+				padding: 0 50px;
+				height: 100%;
+				background: $main-color;
+			    border: none;
+			    border-radius: 40px;
+			    text-transform: uppercase;
+				@include font("ProximaNova-Bold", 20px, #fff);
+			}
+		}
+		&-mail {
+			width: 70%;
+			padding: 20px 22% 20px 30px;
+			border: 2px solid $description;
+			border-radius: 40px;
+			@include font($ral-r, 14px, $description);	
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.subscribe {
+		&__form {
+			&-mail {
+				padding-right: 28%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.subscribe {
+		&__form {
+			&-container {
+				.subscribe__form-submit {
+					right: -2px;
+				}
+			}
+			&-mail {
+				width: 100%;
+				padding-right: 40%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.subscribe {
+		i {
+			padding-right: 0;
+		}
+		&__form {
+			&-container {
+				display: flex;
+				flex-direction: column;
+				.subscribe__form-submit {
+					display: inline-block;
+					position: static;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					margin: 10px auto 0 auto;
+				}
+			}
+			&-mail {
+				padding-right: 30px;
+			}
+		}
+	}
+}

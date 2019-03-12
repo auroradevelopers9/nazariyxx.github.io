@@ -1,0 +1,143 @@
+// FEATURES
+.features {
+	padding: 100px 0;
+	&__title {
+		text-align: center;
+		width: 65%;
+		margin: 0 auto;
+	}
+	&__head {
+		color: $light-headline;
+		margin-bottom: 30px;
+	}
+	&__text {
+		color: $light-description;
+		margin-bottom: 60px;
+	}
+	&__types {
+		padding: 20px 0;
+		border-right: 1px solid rgb(219, 226, 226);
+		.types {
+			&__item {
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+				margin: 25px 0;
+				padding: 5px 0;
+				&--active {
+					border-right: 10px solid $main-color;
+					.types__icon {
+						color: $main-color;
+					}
+				}
+				&:hover {
+					border-right: 10px solid $main-color;
+					.types__icon {
+						color: $main-color;
+					}
+				}
+			}
+			&__icon {
+				width: 48px;
+				color: rgba(61, 62, 66, 0.4);
+				font-size: 48px;
+				text-align: center;
+			}
+			&__head {
+				padding-left: 35px;
+			}
+		}
+	}
+	&__description {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		margin-left: 100px;
+		.description {
+			&__item {
+				display: none;
+				&--active {
+					display: block;
+				}
+			}
+			&__icon {
+				text-align: center;
+				margin-bottom: 60px;
+				i {
+					font-size: 220px;
+					color: $main-color;
+				}
+			}
+			&__head {
+				font-family: $ral-b, sans-serif;
+				font-size: 24px;
+				color: $light-headline;
+				margin-bottom: 30px;
+			}
+			&__text {
+				font-family: $ral-r, sans-serif;
+				font-size: 16px;
+				color: $light-description;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.features {
+		&__description {
+			margin-left: 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.features {
+		&__description {
+			.description {
+				&__icon {
+					margin-bottom: 30px;
+					i {
+						font-size: 160px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.features {
+		&__types {
+			border-top: 1px solid rgb(219, 226, 226);
+			border-right: none;
+			border-bottom: 1px solid rgb(219, 226, 226);
+			.types {
+				&__item {
+					padding: 5px 0 15px 0;
+					&--active {
+						border-right: none;
+						border-bottom: 10px solid #5dca88;
+						padding-bottom: 5px;
+					}
+					&:hover {
+						border-right: none;
+						border-bottom: 10px solid #5dca88;
+						padding-bottom: 5px;
+					}
+				}
+			}
+		}
+		&__description {
+			margin-left: 0;
+			.description {
+				&__item {
+					text-align: center;
+				}
+				&__icon {
+					margin-top: 45px;
+				}
+			}
+		}
+	}
+}

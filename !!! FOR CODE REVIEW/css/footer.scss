@@ -1,0 +1,69 @@
+/*FOOTER*/
+.footer {
+	overflow: hidden;
+	padding: 70px 0 50px 0;
+	background-color: #2d312f;
+	.row {
+		text-align: center;
+	}
+	&__headline {
+		@include font($ral-r, 24px, $description);
+		text-transform: capitalize;
+		margin-bottom: 30px;
+	}
+	&__social {
+		@include flex-c;
+		margin-bottom: 60px;
+		&__item {
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+		&__link {
+			@include flex-c;
+			width: 45px;
+			height: 45px;
+			background-color: #5d6461;
+			border-radius: 50%;
+			@include h-trans;
+			&:hover {
+				background: rgba(255, 255, 255, 0.9);
+				@include h-trans;
+				i {
+					@include h-trans;
+					color: $main-color;
+				}
+			}
+			i {
+				font-size: 25px;
+				color: #2d312f;
+				@include h-trans;
+			}
+		}
+	}
+	&__menu {
+		@include flex-c;
+		&__item {
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+		&__link {
+			@include font($ral-r, 14px, $description);
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.footer {
+		&__menu {
+			display: block;
+			&__item {
+				&:not(:last-child) {
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
